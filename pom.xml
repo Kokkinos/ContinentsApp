@@ -8,11 +8,11 @@
 		<version>3.4.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.qualco</groupId>
-	<artifactId>assignment</artifactId>
+	<groupId>com.continents</groupId>
+	<artifactId>app</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>assignment</name>
-	<description>Assignment</description>
+	<name>app</name>
+	<description>App</description>
 	<url/>
 	<licenses>
 		<license/>

@@ -1,6 +1,6 @@
-package com.qualco.assignment.repositories;
+package com.continents.app.repositories;
 
-import com.qualco.assignment.entities.Language;
+import com.continents.app.entities.Language;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

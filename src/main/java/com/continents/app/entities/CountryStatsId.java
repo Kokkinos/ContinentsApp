@@ -1,4 +1,4 @@
-package com.qualco.assignment.entities;
+package com.continents.app.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;

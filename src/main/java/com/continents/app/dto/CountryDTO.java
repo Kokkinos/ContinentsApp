@@ -1,4 +1,4 @@
-package com.qualco.assignment.dto;
+package com.continents.app.dto;
 
 public class CountryDTO {
 

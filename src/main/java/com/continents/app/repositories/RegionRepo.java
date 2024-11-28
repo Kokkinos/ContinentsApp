@@ -1,10 +1,8 @@
-package com.qualco.assignment.repositories;
+package com.continents.app.repositories;
 
-import com.qualco.assignment.entities.Region;
+import com.continents.app.entities.Region;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 @Repository
 public interface RegionRepo extends JpaRepository<Region, Integer> {

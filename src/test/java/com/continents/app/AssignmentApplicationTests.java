@@ -1,4 +1,4 @@
-package com.qualco.assignment;
+package com.continents.app;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

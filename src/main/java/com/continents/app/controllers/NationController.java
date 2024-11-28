@@ -1,11 +1,11 @@
-package com.qualco.assignment.controllers;
+package com.continents.app.controllers;
 
-import com.qualco.assignment.dto.CountryDTO;
-import com.qualco.assignment.entities.Country;
-import com.qualco.assignment.entities.Region;
-import com.qualco.assignment.repositories.CountryRepo;
-import com.qualco.assignment.repositories.LanguageRepo;
-import com.qualco.assignment.repositories.RegionRepo;
+import com.continents.app.dto.CountryDTO;
+import com.continents.app.entities.Country;
+import com.continents.app.entities.Region;
+import com.continents.app.repositories.CountryRepo;
+import com.continents.app.repositories.LanguageRepo;
+import com.continents.app.repositories.RegionRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;

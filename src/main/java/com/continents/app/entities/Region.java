@@ -1,4 +1,4 @@
-package com.qualco.assignment.entities;
+package com.continents.app.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

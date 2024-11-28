@@ -1,4 +1,4 @@
-package com.qualco.assignment;
+package com.continents.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

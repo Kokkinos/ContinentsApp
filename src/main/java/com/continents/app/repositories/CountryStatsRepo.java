@@ -1,12 +1,9 @@
-package com.qualco.assignment.repositories;
+package com.continents.app.repositories;
 
-import com.qualco.assignment.entities.CountryStats;
-import com.qualco.assignment.entities.CountryStatsId;
+import com.continents.app.entities.CountryStats;
+import com.continents.app.entities.CountryStatsId;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
-import java.util.Optional;
 
 @Repository
 public interface CountryStatsRepo extends JpaRepository<CountryStats, CountryStatsId> {
