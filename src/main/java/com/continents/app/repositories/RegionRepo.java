@@ -9,6 +9,4 @@ import java.util.List;
 @Repository
 public interface RegionRepo extends JpaRepository<Region, Integer> {
 
-//    List<Region> findByContinent_ContinentId(Long continentId);
-    List<Region> findByContinentId(Integer continentId);
 }
