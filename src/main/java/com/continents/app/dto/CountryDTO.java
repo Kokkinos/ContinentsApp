@@ -1,15 +1,11 @@
 package com.continents.app.dto;
 
 public class CountryDTO {
-
-
-    private Integer id;
     private String name;
     private Double area;
     private String countryCode2;
 
-    public CountryDTO(Integer id, String name, Double area, String countryCode2) {
-        this.id = id;
+    public CountryDTO(String name, Double area, String countryCode2) {
         this.name = name;
         this.area = area;
         this.countryCode2 = countryCode2;
@@ -40,12 +36,4 @@ public class CountryDTO {
         this.countryCode2 = countryCode2;
     }
 
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 }

@@ -15,9 +15,12 @@ public class Language {
     @Column(name = "language")
     private String language;
 
-    @ManyToMany(mappedBy = "languages")
-    @JsonIgnore
-    private List<Country> countries;
+//    @ManyToMany(mappedBy = "languages")
+//    @JsonIgnore
+//    private List<Country> countries;
+
+    @OneToMany(mappedBy = "language")
+    private List<CountryLanguage> countryLanguages;
 
     public Integer getId() {
         return id;
@@ -34,12 +37,20 @@ public class Language {
     public void setLanguage(String language) {
         this.language = language;
     }
+//
+//    public List<Country> getCountries() {
+//        return countries;
+//    }
+//
+//    public void setCountries(List<Country> countries) {
+//        this.countries = countries;
+//    }
 
-    public List<Country> getCountries() {
-        return countries;
+    public List<CountryLanguage> getCountryLanguages() {
+        return countryLanguages;
     }
 
-    public void setCountries(List<Country> countries) {
-        this.countries = countries;
+    public void setCountryLanguages(List<CountryLanguage> countryLanguages) {
+        this.countryLanguages = countryLanguages;
     }
 }

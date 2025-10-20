@@ -15,6 +15,10 @@ public class Region {
     @Column(name="name")
     private String name;
 
+    /**
+     * The Region entity is the owning side of the relationship with Continent
+     * This entity has a foreign key column named continent_id referring to the primary id of Continent
+     */
     @ManyToOne
     @JoinColumn(name="continent_id")
     private Continent continent;

@@ -10,8 +10,8 @@ import java.util.List;
 @Repository
 public interface LanguageRepo extends JpaRepository<Language, Integer> {
 
-//    List<Language> findByLanguageContainingIgnoreCase(String language);
+//    @Query("SELECT l.language FROM Language l JOIN l.countries c WHERE c.id = :countryId")
+//    List<String> findLanguagesByCountryId(Integer countryId);
 
-    @Query("SELECT l.language FROM Language l JOIN l.countries c WHERE c.id = :countryId")
-    List<String> findLanguagesByCountryId(Integer countryId);
+//    List<Language> findByCountryCode2(String countryCode2);
 }

@@ -29,12 +29,12 @@ public class Country {
 
     @OneToMany(mappedBy = "country")
     private List<CountryStats> stats;
-
-    @ManyToMany
-    @JoinTable(name = "country_languages",
-    joinColumns = @JoinColumn(name="country_id"),
-    inverseJoinColumns = @JoinColumn(name="language_id"))
-    private List<Language> languages;
+//
+//    @ManyToMany
+//    @JoinTable(name = "country_languages",
+//    joinColumns = @JoinColumn(name="country_id"),
+//    inverseJoinColumns = @JoinColumn(name="language_id"))
+//    private List<Language> languages;
 
 
 
@@ -102,11 +102,11 @@ public class Country {
         this.stats = stats;
     }
 
-    public List<Language> getLanguages() {
-        return languages;
-    }
-
-    public void setLanguages(List<Language> languages) {
-        this.languages = languages;
-    }
+//    public List<Language> getLanguages() {
+//        return languages;
+//    }
+//
+//    public void setLanguages(List<Language> languages) {
+//        this.languages = languages;
+//    }
 }

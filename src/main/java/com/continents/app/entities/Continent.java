@@ -15,6 +15,11 @@ public class Continent {
     @Column(name="name")
     private String name;
 
+
+    /**
+     * mappedBy is used to define the referencing side (region) of the relationship
+     * In this case the continent field or Region entity
+     */
     @OneToMany(mappedBy = "continent")
     @JsonIgnore
     private List<Region> regions;

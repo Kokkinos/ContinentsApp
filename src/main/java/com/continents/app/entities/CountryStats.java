@@ -3,6 +3,8 @@ package com.continents.app.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "country_stats")
 public class CountryStats {
@@ -13,7 +15,7 @@ public class CountryStats {
     @Column(name = "population")
     private Long population;
     @Column(name = "gdp")
-    private Double gdp;
+    private BigDecimal gdp;
 
     @ManyToOne
     @MapsId("countryId")
@@ -37,11 +39,11 @@ public class CountryStats {
         this.population = population;
     }
 
-    public Double getGdp() {
+    public BigDecimal getGdp() {
         return gdp;
     }
 
-    public void setGdp(Double gdp) {
+    public void setGdp(BigDecimal gdp) {
         this.gdp = gdp;
     }
 
