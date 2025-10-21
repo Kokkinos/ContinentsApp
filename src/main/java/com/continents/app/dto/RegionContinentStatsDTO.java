@@ -23,7 +23,6 @@ public class RegionContinentStatsDTO {
         this.gdp = gdp;
     }
 
-    // getters & setters
     public String getContinentName() { return continentName; }
     public String getRegionName() { return regionName; }
     public String getCountryName() { return countryName; }

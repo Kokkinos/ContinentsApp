@@ -3,7 +3,6 @@ package com.continents.app.services;
 import com.continents.app.dto.CountryDTO;
 import com.continents.app.dto.LanguageDTO;
 import com.continents.app.entities.Country;
-import com.continents.app.entities.Language;
 import com.continents.app.repositories.CountryLanguageRepo;
 import com.continents.app.repositories.CountryRepo;
 import org.springframework.beans.factory.annotation.Autowired;

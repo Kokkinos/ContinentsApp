@@ -11,7 +11,6 @@ public class CountryDTO {
         this.countryCode2 = countryCode2;
     }
 
-    // Getters and setters
     public String getName() {
         return name;
     }

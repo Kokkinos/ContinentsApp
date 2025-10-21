@@ -48,17 +48,17 @@ public class StatsService {
         }).collect(Collectors.toList());
     }
 
-    public List<RegionContinentStatsDTO> filterByRegionAndYears(Integer regionId, Integer from, Integer to, int page, int size) {
+    public List<RegionContinentStatsDTO> filterByRegionAndYears(String regionName, Integer from, Integer to, int page, int size) {
         int offset = page * size;
-        List<Object[]> rows = countryStatsRepo.findByRegionAndYearRangeNative(regionId, from, to, size, offset);
+        List<Object[]> rows = countryStatsRepo.findByRegionAndYearRangeNative(regionName, from, to, size, offset);
         return rows.stream().map(r -> {
             String continentName = r[0] == null ? null : r[0].toString();
-            String regionName = r[1] == null ? null : r[1].toString();
+            String regionNameVal = r[1] == null ? null : r[1].toString();
             String countryName = r[2] == null ? null : r[2].toString();
             Integer year = r[3] == null ? null : ((Number) r[3]).intValue();
             Long population = r[4] == null ? null : ((Number) r[4]).longValue();
             BigDecimal gdp = r[5] == null ? null : new BigDecimal(r[5].toString());
-            return new RegionContinentStatsDTO(continentName, regionName, countryName, year, population, gdp);
+            return new RegionContinentStatsDTO(continentName, regionNameVal, countryName, year, population, gdp);
         }).collect(Collectors.toList());
     }
 }

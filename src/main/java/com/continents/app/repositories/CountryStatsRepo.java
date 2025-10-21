@@ -13,13 +13,6 @@ import java.util.List;
 
 @Repository
 public interface CountryStatsRepo extends JpaRepository<CountryStats, CountryStatsId> {
-//
-//    @Query("SELECT new com.continents.app.dto.CountryStatsDTO(c.name, cs.id.countryId, cs.id.year, cs.population, cs.gdp, (cs.gdp / cs.population) as gdpPerPopulation) " +
-//            "FROM CountryStats cs JOIN cs.country c " +
-//            "WHERE (cs.gdp / cs.population) = (SELECT MAX(cs2.gdp / cs2.population) FROM CountryStats cs2 WHERE cs2.id.countryId = cs.id.countryId) " +
-//            "ORDER BY c.name")
-//    List<CountryStatsDTO> findMaxGdpPerPopulationForEachCountry();
-
 
     @Query("""
         SELECT cs FROM CountryStats cs
@@ -27,8 +20,7 @@ public interface CountryStatsRepo extends JpaRepository<CountryStats, CountrySta
         """)
     Page<CountryStats> findByYearBetween(Integer fromYear, Integer toYear, Pageable pageable);
 
-    // Task #2: for each country, get stat row(s) with max (gdp/population) ratio
-    // Use native query because of ratio and null/zero population handling
+
     @Query(value = """
         SELECT c.country_id as countryId, c.name as countryName, c.country_code3 as countryCode3,
                s.year as year, s.population as population, s.gdp as gdp
@@ -50,10 +42,10 @@ public interface CountryStatsRepo extends JpaRepository<CountryStats, CountrySta
         JOIN countries c ON c.country_id = s.country_id
         JOIN regions r ON r.region_id = c.region_id
         JOIN continents cont ON cont.continent_id = r.continent_id
-        WHERE (:regionId IS NULL OR r.region_id = :regionId)
+        WHERE (:regionName IS NULL OR r.name = :regionName)
           AND s.year BETWEEN :fromYear AND :toYear
         ORDER BY cont.name, r.name, c.name, s.year
         LIMIT :limit OFFSET :offset
         """, nativeQuery = true)
-    List<Object[]> findByRegionAndYearRangeNative(Integer regionId, Integer fromYear, Integer toYear, int limit, int offset);
+    List<Object[]> findByRegionAndYearRangeNative(String regionName, Integer fromYear, Integer toYear, int limit, int offset);
 }

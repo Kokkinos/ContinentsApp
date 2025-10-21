@@ -27,6 +27,4 @@ public class CountryController {
     public ResponseEntity<List<LanguageDTO>> getCountryLanguages(@PathVariable String code) {
         return new ResponseEntity<>(countryService.getLanguagesForCountry(code), HttpStatus.OK);
     }
-
-
 }

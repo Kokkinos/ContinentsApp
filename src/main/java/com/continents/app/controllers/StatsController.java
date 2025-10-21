@@ -35,13 +35,13 @@ public class StatsController {
 
     @GetMapping("/by-region")
     public ResponseEntity<List<RegionContinentStatsDTO>> byRegion(
-            @RequestParam(required = false) Integer regionId,
+            @RequestParam(required = false) String regionName,
             @RequestParam(defaultValue = "2000") Integer from,
             @RequestParam(defaultValue = "2020") Integer to,
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "20") int size
     ) {
-        List<RegionContinentStatsDTO> rows = statsService.filterByRegionAndYears(regionId, from, to, page, size);
+        List<RegionContinentStatsDTO> rows = statsService.filterByRegionAndYears(regionName, from, to, page, size);
         return ResponseEntity.ok(rows);
     }
 }

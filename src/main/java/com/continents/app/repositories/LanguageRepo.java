@@ -10,8 +10,4 @@ import java.util.List;
 @Repository
 public interface LanguageRepo extends JpaRepository<Language, Integer> {
 
-//    @Query("SELECT l.language FROM Language l JOIN l.countries c WHERE c.id = :countryId")
-//    List<String> findLanguagesByCountryId(Integer countryId);
-
-//    List<Language> findByCountryCode2(String countryCode2);
 }
